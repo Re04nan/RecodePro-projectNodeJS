@@ -13,9 +13,13 @@
     <div class="card mt-2 mb-2">
         <div class="card-body ">
             <h5>Resultado Cep</h5>
+            <% if (dado.logradouro != ""){ %>
               <strong><%= dado.logradouro %></strong>
               <br/><strong><%= dado.localidade %></strong>
               </br><strong><%= dado.bairro %></strong>
+            <% } else { %>
+              <h3>Erro cep inválido!</h3>
+            <% } %>
         </div>
     </div>
     <a href="/" class="btn btn-outline-dark">Procurar outro endereço</a>

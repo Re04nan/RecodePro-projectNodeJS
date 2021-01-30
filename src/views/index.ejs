@@ -34,16 +34,16 @@
                 <form action="/filterMovie" method="GET">
                     <div class="form-group">
                         <label>Sugestões de filmes</label>
-                        <input type="search" name="texto" maxlength="5" placeholder="Digite uma letra..." class="form-control inputP" required>
+                        <input type="search" name="texto" maxlength="15" placeholder="Digite um nome ou letra..." class="form-control inputP" required>
                         <button class="btn" id="search"><i class="fas fa-search"></i></button>
-                        <div class="alert alert-warning m-4" role="alert">Pesquise por palavras comuns ou uma letra apenas, caso contrário pode gerar um erro ainda não tratado!</div>
+                        <div class="alert alert-warning m-4" role="alert">Pesquise em inglês, exemplo (car, cloud, ...)!</div>
                     </div>
                 </form>
                 
                 <form action="/envia-cep" method="POST">
                     <div class="form-group">
                       <label for="cep">Cep</label>
-                      <input class="form-control inputP" type="number" name="cep" minlength="8" id="cep" required>
+                      <input class="form-control inputP" type="text" name="cep" placeholder="00000000" minlength="8" maxlength="8" id="cep" required>
                       <input type="submit" class="btn btn-outline-success mt-2" value="Buscar">
                     </div>
                 </form>

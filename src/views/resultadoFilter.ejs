@@ -11,18 +11,15 @@
         <a href="/" class="btn btn-outline-dark mt-4 mb-4">Pesquisar novamente</a>
         <h5>Resultado Pesquisa</h5>
         <ul>
-              <li><%= pesquisa.results[0].title%></li>
-              <li><%= pesquisa.results[1].title%></li>
-              <li><%= pesquisa.results[2].title%></li>
-              <li><%= pesquisa.results[4].title%></li>
-              <li><%= pesquisa.results[5].title%></li>
-              <li><%= pesquisa.results[6].title%></li>
-              <li><%= pesquisa.results[7].title%></li>
-              <li><%= pesquisa.results[8].title%></li>
-              <li><%= pesquisa.results[9].title%></li>
-              <li><%= pesquisa.results[10].title%></li>
-              <li><%= pesquisa.results[11].title%></li>
-              <li><%= pesquisa.results[12].title%></li>
+        <% if(pesquisa.results != ""){ %>
+            <% for(i=0;pesquisa.page > i;i++){  %>
+                <li>
+                    <%= pesquisa.results[i].title %>
+                </li>
+            <% } %>
+        <% } else { %>
+            <h3>Título não encontrado!</h3>
+        <% } %>
         </ul> 
     </div>
 </body>
